@@ -1,0 +1,52 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DaVinci", "DaVinci\DaVinci.csproj", "{742932AB-A9D7-49EF-B5C1-904840CFE23A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DaVinci.Database", "DaVinci.Database\DaVinci.Database.csproj", "{731363EF-6CD7-40B5-9EEC-4C11B5DB5524}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DaVinci.Models", "DaVinci.Models\DaVinci.Models.csproj", "{CC48CB06-96F3-4EA0-9D84-243E0D0A0B7A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DaVinci.Repository", "DaVinci.Repository\DaVinci.Repository.csproj", "{91D232BF-2C91-42BC-A35B-898554075A28}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DaVinci.Service", "DaVinci.Service\DaVinci.Service.csproj", "{262F0642-EBA8-46B4-A2DC-256AD5A3D31B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DaVinci.Services.Test", "DaVinci.Services.Test\DaVinci.Services.Test.csproj", "{4259777B-69C3-4BA6-99C7-1F351A5B4B92}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{742932AB-A9D7-49EF-B5C1-904840CFE23A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{742932AB-A9D7-49EF-B5C1-904840CFE23A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{742932AB-A9D7-49EF-B5C1-904840CFE23A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{742932AB-A9D7-49EF-B5C1-904840CFE23A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{731363EF-6CD7-40B5-9EEC-4C11B5DB5524}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{731363EF-6CD7-40B5-9EEC-4C11B5DB5524}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{731363EF-6CD7-40B5-9EEC-4C11B5DB5524}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{731363EF-6CD7-40B5-9EEC-4C11B5DB5524}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CC48CB06-96F3-4EA0-9D84-243E0D0A0B7A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CC48CB06-96F3-4EA0-9D84-243E0D0A0B7A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CC48CB06-96F3-4EA0-9D84-243E0D0A0B7A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CC48CB06-96F3-4EA0-9D84-243E0D0A0B7A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{91D232BF-2C91-42BC-A35B-898554075A28}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{91D232BF-2C91-42BC-A35B-898554075A28}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{91D232BF-2C91-42BC-A35B-898554075A28}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{91D232BF-2C91-42BC-A35B-898554075A28}.Release|Any CPU.Build.0 = Release|Any CPU
+		{262F0642-EBA8-46B4-A2DC-256AD5A3D31B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{262F0642-EBA8-46B4-A2DC-256AD5A3D31B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{262F0642-EBA8-46B4-A2DC-256AD5A3D31B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{262F0642-EBA8-46B4-A2DC-256AD5A3D31B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4259777B-69C3-4BA6-99C7-1F351A5B4B92}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4259777B-69C3-4BA6-99C7-1F351A5B4B92}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4259777B-69C3-4BA6-99C7-1F351A5B4B92}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4259777B-69C3-4BA6-99C7-1F351A5B4B92}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
