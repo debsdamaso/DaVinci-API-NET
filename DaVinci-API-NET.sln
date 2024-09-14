@@ -3,25 +3,28 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.0.31903.59
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DaVinci", "DaVinci\DaVinci.csproj", "{742932AB-A9D7-49EF-B5C1-904840CFE23A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DaVinci", "DaVinci\DaVinci.csproj", "{742932AB-A9D7-49EF-B5C1-904840CFE23A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DaVinci.Database", "DaVinci.Database\DaVinci.Database.csproj", "{731363EF-6CD7-40B5-9EEC-4C11B5DB5524}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DaVinci.Database", "DaVinci.Database\DaVinci.Database.csproj", "{731363EF-6CD7-40B5-9EEC-4C11B5DB5524}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DaVinci.Models", "DaVinci.Models\DaVinci.Models.csproj", "{CC48CB06-96F3-4EA0-9D84-243E0D0A0B7A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DaVinci.Models", "DaVinci.Models\DaVinci.Models.csproj", "{CC48CB06-96F3-4EA0-9D84-243E0D0A0B7A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DaVinci.Repository", "DaVinci.Repository\DaVinci.Repository.csproj", "{91D232BF-2C91-42BC-A35B-898554075A28}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DaVinci.Repository", "DaVinci.Repository\DaVinci.Repository.csproj", "{91D232BF-2C91-42BC-A35B-898554075A28}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DaVinci.Service", "DaVinci.Service\DaVinci.Service.csproj", "{262F0642-EBA8-46B4-A2DC-256AD5A3D31B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DaVinci.Service", "DaVinci.Service\DaVinci.Service.csproj", "{262F0642-EBA8-46B4-A2DC-256AD5A3D31B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DaVinci.Services.Test", "DaVinci.Services.Test\DaVinci.Services.Test.csproj", "{4259777B-69C3-4BA6-99C7-1F351A5B4B92}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{C5608DCD-0D3F-499F-969A-1A05382E7010}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastructure", "Infrastructure", "{2A773D2D-B9A2-4C4B-B228-746EF5ECB6EA}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{007312CE-694F-47B8-9382-F85DC5D08686}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DaVinic.Services.Test", "DaVinic.Services.Test\DaVinic.Services.Test.csproj", "{88A2DC9D-0F6E-49F1-9333-17E552AAE36F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
-	EndGlobalSection
-	GlobalSection(SolutionProperties) = preSolution
-		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{742932AB-A9D7-49EF-B5C1-904840CFE23A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
@@ -44,9 +47,24 @@ Global
 		{262F0642-EBA8-46B4-A2DC-256AD5A3D31B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{262F0642-EBA8-46B4-A2DC-256AD5A3D31B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{262F0642-EBA8-46B4-A2DC-256AD5A3D31B}.Release|Any CPU.Build.0 = Release|Any CPU
-		{4259777B-69C3-4BA6-99C7-1F351A5B4B92}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{4259777B-69C3-4BA6-99C7-1F351A5B4B92}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{4259777B-69C3-4BA6-99C7-1F351A5B4B92}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{4259777B-69C3-4BA6-99C7-1F351A5B4B92}.Release|Any CPU.Build.0 = Release|Any CPU
+		{88A2DC9D-0F6E-49F1-9333-17E552AAE36F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{88A2DC9D-0F6E-49F1-9333-17E552AAE36F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{88A2DC9D-0F6E-49F1-9333-17E552AAE36F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{88A2DC9D-0F6E-49F1-9333-17E552AAE36F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{742932AB-A9D7-49EF-B5C1-904840CFE23A} = {C5608DCD-0D3F-499F-969A-1A05382E7010}
+		{731363EF-6CD7-40B5-9EEC-4C11B5DB5524} = {2A773D2D-B9A2-4C4B-B228-746EF5ECB6EA}
+		{CC48CB06-96F3-4EA0-9D84-243E0D0A0B7A} = {2A773D2D-B9A2-4C4B-B228-746EF5ECB6EA}
+		{91D232BF-2C91-42BC-A35B-898554075A28} = {2A773D2D-B9A2-4C4B-B228-746EF5ECB6EA}
+		{262F0642-EBA8-46B4-A2DC-256AD5A3D31B} = {C5608DCD-0D3F-499F-969A-1A05382E7010}
+		{2A773D2D-B9A2-4C4B-B228-746EF5ECB6EA} = {C5608DCD-0D3F-499F-969A-1A05382E7010}
+		{88A2DC9D-0F6E-49F1-9333-17E552AAE36F} = {007312CE-694F-47B8-9382-F85DC5D08686}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {B6F80A8B-59D0-4BBC-9457-8248D4CB6D41}
 	EndGlobalSection
 EndGlobal
