@@ -19,7 +19,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastructure", "Infrastru
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{007312CE-694F-47B8-9382-F85DC5D08686}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DaVinic.Services.Test", "DaVinic.Services.Test\DaVinic.Services.Test.csproj", "{88A2DC9D-0F6E-49F1-9333-17E552AAE36F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DaVinci.Services.Test", "DaVinic.Services.Test\DaVinci.Services.Test.csproj", "{88A2DC9D-0F6E-49F1-9333-17E552AAE36F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
