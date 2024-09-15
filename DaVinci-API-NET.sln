@@ -21,6 +21,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{007312CE-6
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DaVinci.Services.Test", "DaVinic.Services.Test\DaVinci.Services.Test.csproj", "{88A2DC9D-0F6E-49F1-9333-17E552AAE36F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DaVinci.Services.Test", "DaVinci.Services.Test\DaVinci.Services.Test.csproj", "{1FE0F74B-D04A-4C1D-A2F7-245B01EB9CF2}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -51,6 +53,10 @@ Global
 		{88A2DC9D-0F6E-49F1-9333-17E552AAE36F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{88A2DC9D-0F6E-49F1-9333-17E552AAE36F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{88A2DC9D-0F6E-49F1-9333-17E552AAE36F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1FE0F74B-D04A-4C1D-A2F7-245B01EB9CF2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1FE0F74B-D04A-4C1D-A2F7-245B01EB9CF2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1FE0F74B-D04A-4C1D-A2F7-245B01EB9CF2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1FE0F74B-D04A-4C1D-A2F7-245B01EB9CF2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
