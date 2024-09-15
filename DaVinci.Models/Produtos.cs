@@ -12,10 +12,5 @@
 
         public string? Modelo { get; set; }
 
-        //1..N
-        public int IdCliente { get; set; }
-        public Clientes? Cliente { get; set; }
-
-        public ICollection<Feedbacks>? Feedbacks { get; set; }
     }
 }

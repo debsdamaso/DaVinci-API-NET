@@ -16,9 +16,5 @@ namespace DaVinci.Models
 
         public string? Cpf { get; set; }
 
-        //1..N
-        public ICollection<Produtos>? Produtos { get; set; }
-
-        public ICollection<Feedbacks>? Feedbacks { get; set; }
     }
 }

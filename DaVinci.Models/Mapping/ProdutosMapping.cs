@@ -23,15 +23,6 @@ namespace DaVinci.Models.Mapping
             builder.Property(p => p.Modelo)
                .HasMaxLength(50); 
 
-            builder.HasOne(p => p.Cliente)
-               .WithMany(c => c.Produtos)
-               .HasForeignKey(p => p.IdCliente)
-               .OnDelete(DeleteBehavior.Restrict);  
-
-            builder.HasMany(p => p.Feedbacks)
-               .WithOne(f => f.Produto)
-               .HasForeignKey(f => f.IdProduto)
-               .OnDelete(DeleteBehavior.Cascade); 
         }
     }
 }

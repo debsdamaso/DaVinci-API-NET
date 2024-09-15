@@ -18,15 +18,6 @@ namespace DaVinci.Models.Mapping
 
             builder.Property(f => f.Avaliacao);
 
-            builder.HasOne(f => f.Cliente)
-                .WithMany(c => c.Feedbacks)
-                .HasForeignKey(f => f.IdCliente)
-                .OnDelete(DeleteBehavior.Cascade); 
-
-            builder.HasOne(f => f.Produto)
-                .WithMany(p => p.Feedbacks)
-                .HasForeignKey(f => f.IdProduto)
-                .OnDelete(DeleteBehavior.Cascade); 
         }
     }
 }

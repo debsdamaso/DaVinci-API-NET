@@ -21,12 +21,7 @@
             <th>
                 @Html.DisplayNameFor(model => model.Avaliacao)
             </th>
-            <th>
-                @Html.DisplayNameFor(model => model.IdCliente)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.IdProduto)
-            </th>
+
             <th></th>
         </tr>
     </thead>
@@ -42,12 +37,7 @@
             <td>
                 @Html.DisplayFor(modelItem => item.Avaliacao)
             </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.IdCliente)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.IdProduto)
-            </td>
+
             <td>
                 <a asp-action="Edit" asp-route-id="@item.IdFeedback">Edit</a> |
                 <a asp-action="Details" asp-route-id="@item.IdFeedback">Details</a> |
