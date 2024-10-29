@@ -29,12 +29,16 @@ builder.Services.AddDbContext<AzureDbContext>(options =>
     options.UseSqlServer(connectionString);
 });
 
+// Registro dos repositórios e serviços
 builder.Services.AddScoped<IClientesRepository, ClientesRepository>();
 builder.Services.AddScoped<IClientesService, ClientesService>();
 builder.Services.AddScoped<IProdutosRepository, ProdutosRepository>();
 builder.Services.AddScoped<IProdutosService, ProdutosService>();
 builder.Services.AddScoped<IFeedbacksRepository, FeedbacksRepository>();
 builder.Services.AddScoped<IFeedbacksService, FeedbacksService>();
+
+// Registro do MLService
+builder.Services.AddSingleton<MLService>();
 
 var app = builder.Build();
 
@@ -51,3 +55,4 @@ app.UseHttpsRedirection();
 app.UseAuthorization();
 app.MapControllers();
 app.Run();
+

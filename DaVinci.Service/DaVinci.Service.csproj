@@ -7,6 +7,10 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Microsoft.ML.OnnxRuntime" Version="1.19.2" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\DaVinci.Database\DaVinci.Database.csproj" />
     <ProjectReference Include="..\DaVinci.Models\DaVinci.Models.csproj" />
     <ProjectReference Include="..\DaVinci.Repository\DaVinci.Repository.csproj" />

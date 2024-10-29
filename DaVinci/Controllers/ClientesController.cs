@@ -1,6 +1,9 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using DaVinci.Models;
 using DaVinci.Service.InterfacesService;
+using System.Collections.Generic;
+using System.Threading.Tasks;
+using DaVinci.Service;
 
 namespace DaVinci.Controllers
 {
@@ -9,10 +12,12 @@ namespace DaVinci.Controllers
     public class ClientesController : ControllerBase
     {
         private readonly IClientesService _clientesService;
+        private readonly MLService _mlService;
 
-        public ClientesController(IClientesService clientesService)
+        public ClientesController(IClientesService clientesService, MLService mlService)
         {
             _clientesService = clientesService;
+            _mlService = mlService;
         }
 
         // GET: api/Clientes
@@ -75,6 +80,19 @@ namespace DaVinci.Controllers
                 return NotFound();
             }
             return NoContent();
+        }
+
+        // POST: api/Clientes/predicao
+        [HttpPost("predicao")]
+        public IActionResult Predicao([FromBody] string texto)
+        {
+            if (string.IsNullOrWhiteSpace(texto))
+            {
+                return BadRequest("O texto de entrada não pode ser vazio.");
+            }
+
+            var resultado = _mlService.PredizerSentimento(texto);
+            return Ok(new { Sentimento = resultado });
         }
     }
 }

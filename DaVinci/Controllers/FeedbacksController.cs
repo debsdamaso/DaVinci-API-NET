@@ -1,80 +1,32 @@
-﻿using Microsoft.AspNetCore.Mvc;
-using DaVinci.Models;
-using DaVinci.Service.InterfacesService;
+﻿using Microsoft.ML.OnnxRuntime;
+using Microsoft.ML.OnnxRuntime.Tensors;
+using System.Collections.Generic;
 
-namespace DaVinci.Controllers
+namespace DaVinci.Utils
 {
-    [Route("api/[controller]")]
-    [ApiController]
-    public class FeedbacksController : ControllerBase
+    public class OnnxModelService
     {
-        private readonly IFeedbacksService _feedbacksService;
+        private readonly InferenceSession _session;
 
-        public FeedbacksController(IFeedbacksService feedbacksService)
+        public OnnxModelService()
         {
-            _feedbacksService = feedbacksService;
+            _session = new InferenceSession("MLModel/modelo_analise_sentimento.onnx");
         }
 
-        // GET: api/Feedbacks
-        [HttpGet]
-        public async Task<ActionResult<IEnumerable<Feedbacks>>> GetFeedbacks()
+        public string AnalisarSentimento(string texto)
         {
-            var feedbacks = await _feedbacksService.GetAllFeedbacksAsync();
-            return Ok(feedbacks);
-        }
+            var input = new DenseTensor<string>(new[] { 1, 1 });
+            input[0, 0] = texto;
 
-        // GET: api/Feedbacks/5
-        [HttpGet("{id}")]
-        public async Task<ActionResult<Feedbacks>> GetFeedback(int id)
-        {
-            var feedback = await _feedbacksService.GetFeedbacksByIdAsync(id);
-            if (feedback == null)
+            var inputs = new List<NamedOnnxValue>
             {
-                return NotFound();
-            }
-            return Ok(feedback);
-        }
+                NamedOnnxValue.CreateFromTensor("input", input)
+            };
 
-        // POST: api/Feedbacks
-        [HttpPost]
-        public async Task<ActionResult<Feedbacks>> PostFeedback([FromBody] Feedbacks feedback)
-        {
-            var createdFeedback = await _feedbacksService.CreateFeedbacksAsync(feedback);
-            return CreatedAtAction(nameof(GetFeedback), new { id = createdFeedback.IdFeedback }, createdFeedback);
-        }
+            using var resultados = _session.Run(inputs);
+            var output = resultados.First().AsEnumerable<float>().ToArray();
 
-        // PUT: api/Feedbacks/5
-        [HttpPut("{id}")]
-        public async Task<IActionResult> PutFeedback(int id, [FromBody] Feedbacks feedback)
-        {
-            if (id != feedback.IdFeedback)
-            {
-                return BadRequest();
-            }
-            try
-            {
-                await _feedbacksService.UpdateFeedbacksAsync(id, feedback);
-            }
-            catch (KeyNotFoundException)
-            {
-                return NotFound();
-            }
-            return NoContent();
-        }
-
-        // DELETE: api/Feedbacks/5
-        [HttpDelete("{id}")]
-        public async Task<IActionResult> DeleteFeedback(int id)
-        {
-            try
-            {
-                await _feedbacksService.DeleteFeedbacksAsync(id);
-            }
-            catch (KeyNotFoundException)
-            {
-                return NotFound();
-            }
-            return NoContent();
+            return output[0] > 0.5 ? "Positivo" : "Negativo";
         }
     }
 }
